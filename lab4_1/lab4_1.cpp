@@ -27,7 +27,7 @@ int main(int argc, char *argv[]) {
 	}
 
 	// Images
-	VideoCapture cap(0);
+	VideoCapture cap(1);
 	Mat frame;
 	//Mat frame = cap.read();
 	cap >> frame;
@@ -35,7 +35,7 @@ int main(int argc, char *argv[]) {
 	cout << frame.size() << endl;
 	string filename(argv[1]);
 	FileStorage fs(filename, FileStorage::READ);
-
+	
 	// Not found
 	if (!fs.isOpened()) {
 		// Image buffer
